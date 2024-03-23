@@ -1,0 +1,3 @@
+[submodule "zsh/.config/zsh/plugins/zsh-rust"]
+	path = zsh/.config/zsh/plugins/zsh-rust
+	url = https://github.com/bluedragon1221/zsh-rust

@@ -1,0 +1,119 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for_window [app_id="float_foot"] floating enable
+
+exec wl-paste --watch cliphist store
+bindsym Mod4+v exec /home/collin/.local/bin/clipboard_history.sh
+bindsym Mod4+Shift+v exec /home/collin/.local/bin/clipboard_edit.sh
+
+bindsym Mod4+x exec foot
+bindsym Mod4+Space exec /home/collin/.local/bin/app_menu
+bindsym Mod4+s exec grim ~/Pictures/screenshots/$(date +'%s_grim.png')
+
+bindsym Mod4+q kill
+bindsym Mod4+f fullscreen
+floating_modifier Mod4 normal
+
+
+	bindsym Mod4+1 workspace number 1
+	bindsym Mod4+Shift+1 move container to workspace number 1
+
+	bindsym Mod4+2 workspace number 2
+	bindsym Mod4+Shift+2 move container to workspace number 2
+
+	bindsym Mod4+3 workspace number 3
+	bindsym Mod4+Shift+3 move container to workspace number 3
+
+	bindsym Mod4+4 workspace number 4
+	bindsym Mod4+Shift+4 move container to workspace number 4
+
+	bindsym Mod4+5 workspace number 5
+	bindsym Mod4+Shift+5 move container to workspace number 5
+
+	bindsym Mod4+6 workspace number 6
+	bindsym Mod4+Shift+6 move container to workspace number 6
+
+	bindsym Mod4+7 workspace number 7
+	bindsym Mod4+Shift+7 move container to workspace number 7
+
+	bindsym Mod4+8 workspace number 8
+	bindsym Mod4+Shift+8 move container to workspace number 8
+
+	bindsym Mod4+9 workspace number 9
+	bindsym Mod4+Shift+9 move container to workspace number 9
+
+
+bindsym Mod4+r reload
+bindsym Mod4+Shift+q exec swaymsg exit
+
+bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+bindsym XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+bindsym XF86MonBrightnessDown exec "brighnessctl set 5%-"
+bindsym XF86MonBrightnessUp exec "brighnessctl set 5%+"
+
+
+
+bar {
+    position bottom
+    status_command while /home/collin/.config/sway/m4/../status.sh; do sleep 1; done
+    mode hide
+    modifier Mod4
+    workspace_buttons yes
+    height 31
+    font "Iosevka Nerd Font" 12
+    colors {
+        statusline #abb2bf
+        background #353B45
+    }
+}
+
+
+output * bg /home/collin/Pictures/wallpapers/Mojave.jpg fill
+seat seat0 xcursor_theme "Vimix-white-cursors"
+
+input "type:touchpad" {
+    dwt disabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation disabled
+}
+input "type:keyboard" {
+    xkb_options caps:super
+}
+
+default_border pixel 2
+smart_gaps on
+smart_borders on
+gaps inner 10
+client.focused #61AFEF #61AFEF #61AFEF 
+client.unfocused #282C34 #282C34 #282C34
+
+
+exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment DISPLAY \
+                                         SWAYSOCK \
+                                         WAYLAND_DISPLAY \
+                                         XDG_CURRENT_DESKTOP
+
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY \
+                                                  SWAYSOCK \
+                                                  XDG_CURRENT_DESKTOP=sway \
+                                                  WAYLAND_DISPLAY
+

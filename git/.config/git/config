@@ -1,0 +1,19 @@
+[init]
+    defaultBranch = main
+
+[user]
+	name = Collin Williams
+	email = 96917990+bluedragon1221@users.noreply.github.com
+
+[color]
+    ui = auto
+
+[alias]
+    scrub = reset --hard origin/main
+    sb = status -sb
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
