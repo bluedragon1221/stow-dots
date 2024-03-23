@@ -7,3 +7,12 @@
 [submodule "zsh/.config/zsh/plugins/zsh-autocomplete"]
 	path = zsh/.config/zsh/plugins/zsh-autocomplete
 	url = https://github.com/marlonrichert/zsh-autocomplete
+[submodule "zsh/.config/zsh/plugins/zsh-autosuggestions"]
+	path = zsh/.config/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/.config/zsh/plugins/zsh-lambda-prompt"]
+	path = zsh/.config/zsh/plugins/zsh-lambda-prompt
+	url = https://github.com/bluedragon1221/zsh-lambda-prompt
+[submodule "zsh/.config/zsh/plugins/zsh-cdls"]
+	path = zsh/.config/zsh/plugins/zsh-cdls
+	url = https://github.com/bluedragon1221/zsh-cdls
