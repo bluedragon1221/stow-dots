@@ -16,3 +16,6 @@
 [submodule "zsh/.config/zsh/plugins/zsh-cdls"]
 	path = zsh/.config/zsh/plugins/zsh-cdls
 	url = https://github.com/bluedragon1221/zsh-cdls
+[submodule "firefox/.var/app/org.mozilla.firefox/.mozilla/firefox/collin"]
+	path = firefox/.var/app/org.mozilla.firefox/.mozilla/firefox/collin
+	url = https://github.com/bmFtZQ/edge-frfox
