@@ -6,7 +6,8 @@ bind_cmd(mod+v, clip_hist)
 bind_cmd(mod+Shift+v, clip_edit)
 
 dnl == Applications ==
-bind_cmd(mod+x, term)
+bind_cmd(mod+x, dbx_term)
+bind_cmd(mod+Shift+x, terminal)
 bind_cmd(mod+Space, menu)
 bind_cmd(mod+s, grim ~/Pictures/screenshots/$(date +'%s_grim.png'))
 

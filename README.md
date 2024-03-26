@@ -28,7 +28,7 @@ distrobox assemble create
 For the graphical dotfiles, you'll still need to install the packages first, then stow them.
 ```sh
 pacman -S sway foot
-stow sway foot
+stow sway foot wallpapers fonts
 ```
 
 Preferably, install graphical applications with flatpak
