@@ -23,13 +23,14 @@ alias wget="wget --no-hsts"
 LESSHISTSIZE=0
 
 # CD
-plug zsh-eza
+setopt autocd
 plug zsh-cdls
 
 # PROMPT
 CURSOR_BEAM=1
 DIR_HASHES=1
-GIT_STATUS=1
+GIT_STATUS=0
+PROMPT_HOSTNAME=1
 plug zsh-lambda-prompt
 prompt lambda
 
@@ -43,3 +44,5 @@ setopt HIST_IGNORE_ALL_DUPS
 plug zsh-broot
 plug zsh-rust
 plug fast-syntax-highlighting
+
+typeset -aU path # fix duplicate path entries
