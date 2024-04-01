@@ -1,3 +1,5 @@
+setopt no_rcs
+
 plug() {
     if [[ -d $ZDOTDIR/plugins/$1 ]]; then
 	source $ZDOTDIR/plugins/$1/$1.plugin.zsh 
@@ -6,25 +8,24 @@ plug() {
     fi
 }
 
-setopt extendedglob
-
 plug zsh-package-check
-autoload -U compinit; compinit
+plug zsh-cdls
+setopt extendedglob norcs
+
 
 # Completion
-plug zsh-autosuggestions
+# plug zsh-autosuggestions
 
-plug zsh-autocomplete
-ALWAYS_SHOW_HISTORY=0
-FANCY_HISTORY_SEARCH=0
-plug completion-settings
+# plug zsh-autocomplete
+# ALWAYS_SHOW_HISTORY=0
+# FANCY_HISTORY_SEARCH=1
+# plug completion-settings
 
 alias wget="wget --no-hsts"
 LESSHISTSIZE=0
 
 # CD
 setopt autocd
-plug zsh-cdls
 
 # PROMPT
 CURSOR_BEAM=1
@@ -44,5 +45,6 @@ setopt HIST_IGNORE_ALL_DUPS
 plug zsh-broot
 plug zsh-rust
 plug fast-syntax-highlighting
+plug zsh-completions
 
 typeset -aU path # fix duplicate path entries

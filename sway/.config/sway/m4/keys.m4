@@ -2,8 +2,8 @@ for_window [app_id="float_foot"] floating enable
 
 dnl == Clipboard ==
 exec wl-paste --watch cliphist store
-bind_cmd(mod+v, clip_hist)
-bind_cmd(mod+Shift+v, clip_edit)
+bind_cmd(mod+v, clipboard_history.sh)
+bind_cmd(mod+Shift+v, clipboard_edit.sh)
 
 dnl == Applications ==
 bind_cmd(mod+x, dbx_term)

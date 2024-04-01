@@ -21,8 +21,8 @@
 for_window [app_id="float_foot"] floating enable
 
 exec wl-paste --watch cliphist store
-bindsym Mod4+v exec /home/collin/.local/bin/clipboard_history.sh
-bindsym Mod4+Shift+v exec /home/collin/.local/bin/clipboard_edit.sh
+bindsym Mod4+v exec clipboard_history.sh
+bindsym Mod4+Shift+v exec clipboard_edit.sh
 
 bindsym Mod4+x exec foot --config="/home/collin/.config/foot/term.ini"
 bindsym Mod4+Shift+x exec foot --config="/home/collin/.config/foot/root.ini"

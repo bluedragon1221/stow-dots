@@ -17,6 +17,7 @@ include(m4_dir/dsl.m4)
 include(m4_dir/keys.m4)
 include(m4_dir/bar.m4)
 
+dnl == Theming
 output * bg wallpaper fill
 seat seat0 xcursor_theme cursor
 

@@ -15,11 +15,18 @@ if is_command batcat; then
 fi
 # dont ask me why ¯\_(ツ)_/¯
 
-if is_command hx || is_command helix; then
-  alias hx=helix
-  export EDITOR=helix
+if is_command hx; then
+  export EDITOR=hx
   alias vim=hx
   alias nvim=hx
+  if setopt | grep "autocd" &>/dev/null; then
+    alias -s {rs,py,sh}=hx
+  fi
+elif is_command helix; then
+  alias hx=helix
+  export EDITOR=helix
+  alias vim=helix
+  alias nvim=helix
   if setopt | grep "autocd" &>/dev/null; then
     alias -s {rs,py,sh}=helix
   fi
