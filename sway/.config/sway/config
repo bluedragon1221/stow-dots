@@ -71,23 +71,9 @@ bindsym XF86MonBrightnessDown exec "brighnessctl set 5%-"
 bindsym XF86MonBrightnessUp exec "brighnessctl set 5%+"
 
 
+exec waybar
 
-bar {
-    position bottom
-    status_command while /home/collin/.config/sway/m4/../status.sh; do sleep 1; done
-    mode hide
-    modifier Mod4
-    workspace_buttons yes
-    height 31
-    font "Iosevka Nerd Font" 12
-    colors {
-        statusline #abb2bf
-        background #353B45
-    }
-}
-
-
-output * bg /home/collin/Pictures/wallpapers/Mojave.jpg fill
+output * bg /home/collin/Pictures/wallpapers/od_guardian.png fill
 seat seat0 xcursor_theme "Vimix-white-cursors"
 
 input "type:touchpad" {
@@ -105,8 +91,7 @@ smart_gaps on
 smart_borders on
 gaps inner 10
 client.focused #61AFEF #61AFEF #61AFEF 
-client.unfocused #282C34 #282C34 #282C34
-
+client.unfocused #353b45 #353b45 #353b45
 
 exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment DISPLAY \

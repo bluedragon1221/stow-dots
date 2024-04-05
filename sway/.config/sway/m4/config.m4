@@ -10,12 +10,15 @@ define(dbx_term, foot --config="foot_dir/term.ini")
 define(menu, user_bin/app_menu)
 define(clip_hist, user_bin/clipboard_history.sh)
 define(clip_edit, user_bin/clipboard_edit.sh)
-define(wallpaper, /home/USER/Pictures/wallpapers/Mojave.jpg)
+define(wallpaper, /home/USER/Pictures/wallpapers/od_guardian.png)
 define(cursor, "Vimix-white-cursors")
 
 include(m4_dir/dsl.m4)
 include(m4_dir/keys.m4)
-include(m4_dir/bar.m4)
+
+dnl == Bar ==
+dnl include(m4_dir/bar.m4)
+exec waybar
 
 dnl == Theming
 output * bg wallpaper fill
@@ -38,6 +41,5 @@ smart_gaps on
 smart_borders on
 gaps inner 10
 client.focused #61AFEF #61AFEF #61AFEF 
-client.unfocused #282C34 #282C34 #282C34
-
+client.unfocused #353b45 #353b45 #353b45
 include(m4_dir/systemd-user.conf)

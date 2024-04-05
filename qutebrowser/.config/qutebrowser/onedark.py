@@ -20,7 +20,7 @@ fg_error = "#e06c75"            # red
 bg_hint = "#e5c07b"             # yellow
 fg_matched_text = "#98c379"     # green
 bg_passthrough_mode = "#56b6c2" # teal
-bg_insert_mode = "#61afef"      # blue
+blue = "#61afef"
 bg_warning = "#c678dd"          # purple
 # "#be5046"                     # dark red
 
@@ -36,7 +36,7 @@ c.colors.completion.fg = fg_default
 c.colors.completion.odd.bg = bg_lighter
 
 # Background color of the completion widget for even rows.
-c.colors.completion.even.bg = bg_default
+c.colors.completion.even.bg = bg_lighter
 
 # Foreground color of completion widget category headers.
 c.colors.completion.category.fg = bg_hint
@@ -54,7 +54,7 @@ c.colors.completion.category.border.bottom = bg_default
 c.colors.completion.item.selected.fg = fg_default
 
 # Background color of the selected completion item.
-c.colors.completion.item.selected.bg = bg_selection
+c.colors.completion.item.selected.bg = bg_lighter
 
 # Top border color of the selected completion item.
 c.colors.completion.item.selected.border.top = bg_selection
@@ -99,7 +99,7 @@ c.colors.downloads.bar.bg = bg_default
 c.colors.downloads.start.fg = bg_default
 
 # Color gradient start for download backgrounds.
-c.colors.downloads.start.bg = bg_insert_mode
+c.colors.downloads.start.bg = blue
 
 # Color gradient end for download text.
 c.colors.downloads.stop.fg = bg_default
@@ -175,13 +175,13 @@ c.colors.prompts.selected.fg = fg_default
 c.colors.statusbar.normal.fg = fg_matched_text
 
 # Background color of the statusbar.
-c.colors.statusbar.normal.bg = bg_default
+c.colors.statusbar.normal.bg = bg_lighter
 
 # Foreground color of the statusbar in insert mode.
 c.colors.statusbar.insert.fg = bg_default
 
 # Background color of the statusbar in insert mode.
-c.colors.statusbar.insert.bg = bg_insert_mode
+c.colors.statusbar.insert.bg = blue
 
 # Foreground color of the statusbar in passthrough mode.
 c.colors.statusbar.passthrough.fg = bg_default
@@ -217,10 +217,10 @@ c.colors.statusbar.caret.bg = bg_warning
 c.colors.statusbar.caret.selection.fg = bg_default
 
 # Background color of the statusbar in caret mode with a selection.
-c.colors.statusbar.caret.selection.bg = bg_insert_mode
+c.colors.statusbar.caret.selection.bg = blue
 
 # Background color of the progress bar.
-c.colors.statusbar.progress.bg = bg_insert_mode
+c.colors.statusbar.progress.bg = blue
 
 # Default foreground color of the URL in the statusbar.
 c.colors.statusbar.url.fg = fg_default
@@ -246,7 +246,7 @@ c.colors.statusbar.url.warn.fg = bg_warning
 c.colors.tabs.bar.bg = bg_default
 
 # Color gradient start for the tab indicator.
-c.colors.tabs.indicator.start = bg_insert_mode
+c.colors.tabs.indicator.start = blue
 
 # Color gradient end for the tab indicator.
 c.colors.tabs.indicator.stop = bg_passthrough_mode
@@ -258,7 +258,7 @@ c.colors.tabs.indicator.error = fg_error
 c.colors.tabs.odd.fg = fg_default
 
 # Background color of unselected odd tabs.
-c.colors.tabs.odd.bg = bg_lighter
+c.colors.tabs.odd.bg = bg_default
 
 # Foreground color of unselected even tabs.
 c.colors.tabs.even.fg = fg_default
@@ -290,17 +290,13 @@ c.colors.tabs.pinned.selected.odd.bg = bg_selection
 # Foreground color of pinned selected odd tabs.
 c.colors.tabs.pinned.selected.odd.fg = fg_default
 
-# Foreground color of selected odd tabs.
-c.colors.tabs.selected.odd.fg = fg_default
+# Foreground color of selected tabs.
+c.colors.tabs.selected.odd.fg = bg_default
+c.colors.tabs.selected.even.fg = bg_default
 
-# Background color of selected odd tabs.
-c.colors.tabs.selected.odd.bg = bg_selection
-
-# Foreground color of selected even tabs.
-c.colors.tabs.selected.even.fg = fg_default
-
-# Background color of selected even tabs.
-c.colors.tabs.selected.even.bg = bg_selection
+# Background color of selected tabs.
+c.colors.tabs.selected.odd.bg = blue
+c.colors.tabs.selected.even.bg = blue
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
